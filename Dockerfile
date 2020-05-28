@@ -6,4 +6,3 @@ RUN go build -o ssdb-exporter ./...
 FROM alpine:latest
 COPY --from=builder /build/ssdb-exporter /usr/local/bin/
 ENTRYPOINT ["ssdb-exporter"]
-CMD ["-help"]
